@@ -6,9 +6,23 @@ import hashlib
 
 import re
 
-req = requests.session()
+import os
 
-url  = "http://188.166.173.208:32556/"
+import sys
+
+if(len(sys.argv)==2):
+    
+    url = sys.argv[1]
+
+else:
+
+    print("\n-------------------------- ERRO NO PARAMETRO -----------------------\n")
+    
+    print("Use: " + str(sys.argv[0]) + "http://url:porta")
+
+    exit()
+
+req = requests.session()
 
 ###### Realizando GET Request
 
